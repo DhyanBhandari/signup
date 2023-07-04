@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyparser.urlencoded({extended: true}));
 app.get("/",function(req,res){
-  res.sendFile(__dirname +  "/signup.html");
+  res.sendFile(__dirname +  "/index.html");
 });
 app.post("/",function(req,res){
 const firstname = req.body.fname;
@@ -66,7 +66,7 @@ app.post("/failure",function(req,res){
 
 
 app.listen(process.env.PORT  || 3000,function(){
-  console.log("serrver is running on port 3000");
+  console.log("server is running on port 3000");
 });
 //api key
 //812110aade6e9550621042d502118435-us8
